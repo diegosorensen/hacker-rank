@@ -1,4 +1,4 @@
-package problemsolving.implementation;
+package src.main.java.problemsolving.implementation;
 
 import java.io.*;
 import java.math.*;
