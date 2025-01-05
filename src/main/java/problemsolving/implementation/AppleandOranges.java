@@ -31,7 +31,7 @@ class ResultOrange {
         // Write your code here
 
         List<Integer> firstapples = new ArrayList<>() ;
-        List<Integer> firsoranges = new ArrayList<>() ;
+        List<Integer> firstoranges = new ArrayList<>() ;
         int countapples = 0;
         int countoranges = 0;
 
@@ -41,7 +41,7 @@ class ResultOrange {
         }
 
         for (int j = 0; j < firstapples.size(); j++) {
-            if (s <= firstapples.get(j) || firstapples.get(j) >=t)
+            if (s <= firstapples.get(j) && firstapples.get(j) <=t)
             {
                       countapples++;
         }
@@ -50,19 +50,20 @@ class ResultOrange {
         System.out.println( countapples);
 
         for (int i = 0; i < oranges.size() ; i++) {
-            firsoranges.add(  b+oranges.get(i));
+            firstoranges.add( oranges.get(i)+b);
 
         }
 
-        for (int j = 0; j < firsoranges.size(); j++) {
-            if (s <= firstapples.get(j) || firstapples.get(j) >=t)
+        for (int j = 0; j < firstoranges.size(); j++) {
+            if (s <= firstoranges.get(j) && firstoranges.get(j) <=t)
             {
                 countoranges++;
+
             }
         }
         System.out.println( countoranges);
 
-        System.out.println("hola");
+
     }
 
 }
