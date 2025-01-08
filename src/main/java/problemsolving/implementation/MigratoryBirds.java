@@ -33,20 +33,21 @@ class ResultMigratoryBirds {
         for (int i = 0; i < arr.size() ; i++) {
 
             if (arr.get(i)==1)
-            {cont1++; list.add(i,cont1+1);
+            {cont1++; list.add(cont1);
             }
             if (arr.get(i)==2)
-            {cont2++;list.add(i,+cont2+1);}
+            {cont2++;list.add(cont2);}
             if (arr.get(i)==3)
-            {cont3++;list.add(i,cont3+1); }
+            {cont3++;list.add(cont3); }
             if (arr.get(i)==4)
-            {cont4++;list.add(i,cont4+1); }
+            {cont4++;list.add(cont4); }
             if (arr.get(i)==5)
-            {cont5++; list.add(i,cont5+1);}
+            {cont5++; list.add(cont5);}
 
         }
         int max =0;
-        for (int i = 0; i < list.size(); i++) {
+
+        for (int i = 0; i < 5; i++) {
 
             if (max < list.get(i))
             { max =list.get(i);}
@@ -54,7 +55,7 @@ class ResultMigratoryBirds {
 
 
 
-        return 0;
+        return max;
     }
 
 }
@@ -62,7 +63,7 @@ class ResultMigratoryBirds {
  class SolutionMigratoryBirds {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-       /// BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -72,10 +73,10 @@ class ResultMigratoryBirds {
 
         int result = ResultMigratoryBirds.migratoryBirds(arr);
 
-       // bufferedWriter.write(String.valueOf(result));
-      //  bufferedWriter.newLine();
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
 
         bufferedReader.close();
-       // bufferedWriter.close();
+         bufferedWriter.close();
     }
 }
