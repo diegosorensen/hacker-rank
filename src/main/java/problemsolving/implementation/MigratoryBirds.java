@@ -29,33 +29,21 @@ class ResultMigratoryBirds {
         int cont1=0,cont2=0,cont3=0,cont4=0,cont5=0;
 
         List<Integer> list = new ArrayList<Integer>();
-
-        for (int i = 0; i < arr.size() ; i++) {
-
-            if (arr.get(i)==1)
-            {cont1++; list.add(cont1);
-            }
-            if (arr.get(i)==2)
-            {cont2++;list.add(cont2);}
-            if (arr.get(i)==3)
-            {cont3++;list.add(cont3); }
-            if (arr.get(i)==4)
-            {cont4++;list.add(cont4); }
-            if (arr.get(i)==5)
-            {cont5++; list.add(cont5);}
-
-        }
-        int max =0;
+        ArrayList<Integer> arrayList= new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
+            arrayList.add(i,0);
 
-            if (max < list.get(i))
-            { max =list.get(i);}
         }
 
+        int bird =1;
+        for(int j=2;j<=5;j++) {
+            if (Collections.frequency(arr, j) > Collections.frequency(arr, bird)) {
+                bird = j;
+            }
+        }
 
-
-        return max;
+        return bird;
     }
 
 }
